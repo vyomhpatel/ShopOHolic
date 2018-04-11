@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -24,6 +25,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONStringer;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Registration extends AppCompatActivity {
 
@@ -40,9 +45,9 @@ public class Registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         tvLogin = findViewById(R.id.tvLogin);
-        tvLogin.setText(Html.fromHtml("Already have an account? <font color='#EB367E'>Sign In</font> here."));
+        tvLogin.setText(Html.fromHtml("Already have an account? <font color='#ef5350'>Sign In</font> here."));
 
-        mQueue = Volley.newRequestQueue(this);
+//        mQueue = Volley.newRequestQueue(this);
         etFirstName = findViewById(R.id.etFirstName);
         etLastName = findViewById(R.id.etLastName);
         etAddress = findViewById(R.id.etAddress);
@@ -70,19 +75,21 @@ public class Registration extends AppCompatActivity {
         address = etAddress.getText().toString();
 
         jsonParse();
+        startActivity(new Intent(Registration.this,Login.class));
+        finish();
     }
 
 
     private void jsonParse(){
 
 
-        String url = "http://rjtmobile.com/aamir/e-commerce/android-app/shop_reg.php?fname="+firstName+"&lname="+lastName+"&address="+address+"& email="+email+"&mobile="+phone+"&password="+password ;
+        String url = "http://rjtmobile.com/aamir/e-commerce/android-app/shop_reg.php?" ;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
-                Log.i(TAG, "user registration complete for"+firstName);
+                Log.i(TAG, "response: "+response);
 
             }
         }, new Response.ErrorListener() {
@@ -90,8 +97,26 @@ public class Registration extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Log.i(TAG, "user registration failed for"+firstName);
             }
-        });
+        }){
+            @Override
+            protected HashMap<String, String> getParams() throws AuthFailureError {
 
-        mQueue.add(stringRequest);
+                HashMap<String, String> params = new HashMap<String, String>();
+                params.put("fname", firstName);
+                params.put("lname", lastName);
+                params.put("address", address);
+                params.put("email", email);
+                params.put("mobile", phone);
+                params.put("password", password);
+
+                return params;
+
+            }
+        };
+
+
+
+        Volley.newRequestQueue(Registration.this).add(stringRequest);
+
     }
 }

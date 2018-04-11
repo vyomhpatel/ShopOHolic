@@ -15,7 +15,8 @@ public class StartUpScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(StartUpScreen.this, Registration.class));
+                startActivity(new Intent(StartUpScreen.this, Login.class));
+                finish();
             }
         },1500);
     }

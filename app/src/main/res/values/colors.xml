@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#fafafa</color>
-    <color name="colorPrimaryDark">#c7c7c7</color>
+    <color name="colorPrimaryDark">#ef5350</color>
     <color name="colorAccent">#ef5350</color>
     <color name="colorPrimaryLight">#ffffff</color>
     <color name="primaryText">#212121</color>
@@ -9,5 +9,8 @@
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
     <color name="hovertv">#c7c7c7</color>
+    <color name="black_text">#000000</color>
+    <color name="icon_normal">#7C7C7C</color>
+    <color name="icon_selected">#ef5350</color>
 
 </resources>
