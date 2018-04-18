@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".activities.Login">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolSignUp"
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
         android:textSize="16sp"
         android:layout_marginTop="15dp"
         android:textStyle="bold"
-        android:text="LOG IN" />
+        android:text="@string/log_in_title" />
     <LinearLayout
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
@@ -56,7 +56,7 @@
             android:layout_gravity="center_horizontal"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Mobile"
+            android:hint="@string/mobile"
             android:background="@drawable/edit_text_background"
             android:text="" />
 
@@ -72,7 +72,7 @@
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:inputType="textPassword"
-            android:hint="Password"
+            android:hint="@string/password"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/edit_text_background"
             android:text="" />
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:textColor="#5e5e5e"
             android:layout_marginTop="10dp"
-            android:text="Remember me?" />
+            android:text="@string/remember_me" />
 
         <Button
             android:id="@+id/btnSignup"
@@ -96,7 +96,7 @@
             android:textColor="#FFFFFF"
             android:layout_marginTop="30dp"
             android:onClick="logUserIn"
-            android:text="Log In" />
+            android:text="@string/log_in" />
         <TextView
             android:id="@+id/tvForgotPw"
             android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
             android:onClick="launchSignup"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:text="Forgot password?, reset here" />
+            android:text="@string/forgot_password_reset_here" />
 
 
     </LinearLayout>

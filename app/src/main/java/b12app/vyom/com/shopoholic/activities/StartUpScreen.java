@@ -1,11 +1,17 @@
-package b12app.vyom.com.shopoholic;
+package b12app.vyom.com.shopoholic.activities;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.airbnb.lottie.LottieAnimationView;
+
+import b12app.vyom.com.shopoholic.R;
+
 public class StartUpScreen extends AppCompatActivity {
+
+    private LottieAnimationView animationView;;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +24,6 @@ public class StartUpScreen extends AppCompatActivity {
                 startActivity(new Intent(StartUpScreen.this, Login.class));
                 finish();
             }
-        },1500);
+        },2700);
     }
 }

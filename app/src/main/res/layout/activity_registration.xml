@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration">
+    tools:context=".activities.Registration">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolSignUp"
@@ -56,7 +56,7 @@
             android:layout_gravity="center_horizontal"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="First Name"
+            android:hint="@string/first_name"
             android:src= "@drawable/view_shape"
             android:background="@drawable/edit_text_background"
             android:text="" />
@@ -73,7 +73,7 @@
             android:layout_gravity="center_horizontal"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Last Name"
+            android:hint="@string/last_name"
             android:background="@drawable/edit_text_background"
             android:text="" />
         <EditText
@@ -89,7 +89,7 @@
             android:layout_gravity="center_horizontal"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Address"
+            android:hint="@string/address"
             android:background="@drawable/edit_text_background"
             android:text="" />
         <EditText
@@ -105,7 +105,7 @@
             android:layout_gravity="center_horizontal"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Mobile"
+            android:hint="@string/mobile"
             android:background="@drawable/edit_text_background"
             android:text="" />
         <EditText
@@ -121,7 +121,7 @@
             android:layout_gravity="center_horizontal"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:hint="Email"
+            android:hint="@string/email"
             android:background="@drawable/edit_text_background"
             android:text="" />
         <EditText
@@ -135,8 +135,9 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="Password"
+            android:inputType="textPassword"
+            android:tooltipText=""
+            android:hint="@string/password"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/edit_text_background"
             android:text="" />
@@ -152,7 +153,7 @@
             android:onClick="registerUser"
             android:textColor="#FFFFFF"
             android:layout_marginTop="30dp"
-            android:text="Sign Up" />
+            android:text="@string/sign_up" />
         <TextView
             android:id="@+id/tvTerms"
             android:layout_width="250dp"
@@ -160,7 +161,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:layout_gravity="center_horizontal"
-            android:text="By Signing up you agree with the Terms of Services and Privacy Policy"
+            android:text="@string/by_signing_up_you_agree_with_the_terms_of_services_and_privacy_policy"
             android:textAlignment="center"
             android:textColor="#DEDEDE"
             android:textSize="9dp" />

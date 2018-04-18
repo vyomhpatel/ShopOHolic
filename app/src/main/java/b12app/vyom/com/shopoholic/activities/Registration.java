@@ -1,34 +1,30 @@
 
-package b12app.vyom.com.shopoholic;
+package b12app.vyom.com.shopoholic.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONStringer;
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+
+import b12app.vyom.com.shopoholic.R;
 
 public class Registration extends AppCompatActivity {
 
@@ -38,6 +34,7 @@ public class Registration extends AppCompatActivity {
     private Button btnRegister;
     private String firstName, lastName, phone, password, address, email;
     private RequestQueue mQueue;
+    private AwesomeValidation awesomeValidation;
 
 
     @Override
@@ -55,6 +52,16 @@ public class Registration extends AppCompatActivity {
         etPhone = findViewById(R.id.etMobile);
         etPassword = findViewById(R.id.etPss);
         btnRegister = findViewById(R.id.btnSignup);
+
+        //applying custom regex for validating mobile, email, firstname, lastname and password fields.
+
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+        awesomeValidation.addValidation(this, R.id.etFirstName, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.nameerror);
+        awesomeValidation.addValidation(this, R.id.etLastName, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.nameerror);
+
+        awesomeValidation.addValidation(this, R.id.etEmail, Patterns.EMAIL_ADDRESS, R.string.emailerror);
+        awesomeValidation.addValidation(this, R.id.etPss, "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$", R.string.passworderror);
+        awesomeValidation.addValidation(this, R.id.etMobile, "^[2-9]{2}[0-9]{8}$", R.string.mobileerror);
 
 
 
@@ -74,11 +81,19 @@ public class Registration extends AppCompatActivity {
         password = etPassword.getText().toString();
         address = etAddress.getText().toString();
 
-        jsonParse();
-        startActivity(new Intent(Registration.this,Login.class));
-        finish();
+
+            //checking the input with regex
+
+            if(awesomeValidation.validate()) {
+                jsonParse();
+                startActivity(new Intent(Registration.this, Login.class));
+                finish();
+            }
     }
 
+
+
+    //making a string request to the server in order to register the user in the registration api
 
     private void jsonParse(){
 
@@ -96,6 +111,7 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.i(TAG, "user registration failed for"+firstName);
+                error.printStackTrace();
             }
         }){
             @Override

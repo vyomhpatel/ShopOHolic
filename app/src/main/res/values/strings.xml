@@ -7,4 +7,54 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="nameerror">Enter Valid Name</string>
+    <string name="emailerror">Enter Valid Email</string>
+    <string name="passworderror">Minimum eight characters, at least one letter and one number</string>
+    <string name="mobileerror">Enter Valid Mobile Number</string>
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me?</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_password_reset_here">Forgot password? reset here</string>
+    <string name="log_in_title">LOG IN</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="by_signing_up_you_agree_with_the_terms_of_services_and_privacy_policy">By Signing up you agree with the Terms of Services and Privacy Policy</string>
+    <string-array name="account_array">
+        <item>My Orders</item>
+        <item>Profile Update</item>
+        <item>Reset Password</item>
+        <item>Log Out</item>
+    </string-array>
+    <string-array name="quantity">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Technologies">
+        <item>Android Material Design</item>
+        <item>Animations</item>
+        <item>Awesome Validations</item>
+        <item>Braintree Payment Gateway Testing</item>
+        <item>Bundles</item>
+        <item>CardView</item>
+        <item>Crashlytics</item>
+        <item>EventBus</item>
+        <item>GridView</item>
+        <item>Intent</item>
+        <item>ListView</item>
+        <item>ListView Adapters</item>
+        <item>Shared Preferences</item>
+        <item>SQLite Database</item>
+        <item>RecyclerView</item>
+        <item>RecyclerView Adapter</item>
+        <item>Volley</item>
+        <item>Picasso</item>
+    </string-array>
 </resources>
