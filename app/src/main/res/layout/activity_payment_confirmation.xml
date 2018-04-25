@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
+    tools:context=".fragments.PaymentConfirmation">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:weightSum="2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+     <TextView
+         android:layout_width="100dp"
+         android:layout_height="match_parent"
+         android:layout_marginLeft="10dp"
+         android:text="Shipping Address"/>
+       <EditText
+           android:layout_width="200dp"
+           android:layout_weight="1"
+           android:layout_marginLeft="10dp"
+           android:id="@+id/etShippingAddress"
+           android:layout_height="match_parent"
+           android:lines="4"
+           android:background="@drawable/edit_text_background" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:text="Standard Delivery"
+        android:drawableRight="@drawable/icon_delivery"
+        android:paddingRight="30dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/delivery_bg"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/edit_text_background">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:id="@+id/tvConfirmTotal"
+            android:text="₹"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="130dp"
+            android:background="@drawable/button_add_to_cart"
+            android:text="Place order"
+
+            android:textColor="#FFFFFF" /></LinearLayout>
+
+
+</LinearLayout>

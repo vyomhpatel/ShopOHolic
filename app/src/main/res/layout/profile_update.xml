@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    android:overScrollMode="always">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="100dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/static_image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/account_image" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/profile_shape"
+            app:srcCompat="@drawable/profile"
+            tools:ignore="VectorDrawableCompat" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2dp"
+            android:textSize="10sp"
+            android:text="FIRST NAME"/>
+        <EditText
+            android:id="@+id/etFirstNameUpdate"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2dp"
+            android:textSize="10sp"
+            android:text="LAST NAME"/>
+        <EditText
+            android:id="@+id/etLastNameUpdate"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2dp"
+            android:textSize="10sp"
+            android:text="EMAIL"/>
+        <EditText
+            android:id="@+id/etEmailUpdate"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2dp"
+            android:textSize="10sp"
+            android:text="MOBILE NUMBER"/>
+        <EditText android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/mobileUpdate"/>
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2dp"
+            android:textSize="10sp"
+            android:text="ADDRESS"/>
+        <EditText android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/addressUpdate"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="35sp"
+            android:text="SAVE CHANGES"
+            android:id="@+id/btnUpdate"
+            android:background="@drawable/view_shape"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
+</ScrollView>

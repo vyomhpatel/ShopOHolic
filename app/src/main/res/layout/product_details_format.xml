@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="always">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/layout_border"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="280dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tvShare"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/share_icon"
+            android:drawablePadding="10dp"
+            android:padding="5dp"
+            android:text="Share"
+            android:textColor="#000000"
+            android:textSize="20sp" /></RelativeLayout>
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Product name"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="30dp"
+        android:id="@+id/tvproductPrice"
+        android:text="$100"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35sp"
+        android:drawableLeft="@drawable/material_basket"
+        android:paddingLeft="40dp"
+        android:textAlignment="textStart"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="10dp"
+        android:text="add to cart"
+        android:background="@drawable/button_add_to_cart"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:id="@+id/btnAddtoCart"
+        tools:ignore="RtlCompat" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        android:text="PRODUCT DETAILS: "/>
+    <TextView
+        android:id="@+id/product_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="5"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Online directory of electrical goods manufacturers, electronic goods suppliers and electronic product manufacturers. "/>
+</LinearLayout>
+</ScrollView>

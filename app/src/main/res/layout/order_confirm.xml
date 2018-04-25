@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_text_background"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/layout_border"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/order_confirm_icon"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="20sp"
+               android:text="Order placed successfully!"
+               android:textStyle="bold"
+               android:textColor="#000000" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="Order No: "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/confirmOrderNo"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:text="12345 "/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ORDER DETAILS"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="12dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/layout_border"
+        android:padding="6dp"
+        android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/tvFinalPayment"
+                android:paddingLeft="5dp"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="Rs 1500"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:textSize="10sp"
+                android:layout_marginBottom="20dp"
+                android:text="Amount due at the payment"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="#cecece"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:id="@+id/tvPersonName"
+            android:text="Vyom Patel" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="10sp"
+                android:id="@+id/tvFinalDelivery"
+                android:text="9341 Twin Oaks Ln, Des Plaines, IL 60016" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="10sp"
+            android:text="Mobile:" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="10sp"
+                android:id="@+id/tvMobileFinal"
+                android:textColor="#000000"
+                android:text="9879400470" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PRODUCT DETAILS"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="12dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_border"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:id="@+id/tvProductName"
+            android:text="Macbook Pro" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="10sp"
+            android:id="@+id/tvProductQty"
+            android:text="Quantity: 1" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/button_add_to_cart"
+        android:text="View Order History"
+        android:id="@+id/btnHistory"
+        android:layout_gravity="bottom"
+        android:textColor="#FFFFFF"
+        android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/tvTerms"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="center_horizontal"
+            android:text="All rights reserved by © Vyom Patel"
+            android:textAlignment="center"
+            android:textColor="#b0bec5"
+            android:textSize="11dp" />
+    </LinearLayout>
+</ScrollView>

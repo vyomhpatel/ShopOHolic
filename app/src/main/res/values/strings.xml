@@ -46,12 +46,15 @@
         <item>CardView</item>
         <item>Crashlytics</item>
         <item>EventBus</item>
+        <item>Firebase Cloud Messaging</item>
         <item>GridView</item>
         <item>Intent</item>
+        <item>MVC Architecture</item>
         <item>ListView</item>
         <item>ListView Adapters</item>
         <item>Shared Preferences</item>
         <item>SQLite Database</item>
+        <item>Picasso</item>
         <item>RecyclerView</item>
         <item>RecyclerView Adapter</item>
         <item>Volley</item>

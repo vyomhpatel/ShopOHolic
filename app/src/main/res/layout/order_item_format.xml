@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:background="@drawable/layout_border"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/orders_icon"
+        android:drawablePadding="5dp"
+        android:textColor="#000000"
+        android:text="Order No:"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:id="@+id/order_no"
+            android:text="1234567890"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_placed"
+        android:textSize="12sp"
+        android:drawableLeft="@drawable/time_icon"
+        android:layout_marginTop="2dp"
+        android:drawablePadding="5dp"
+        android:paddingLeft="5dp"
+        android:gravity="center_vertical"
+        android:text="Placed On Tuesday, October 24, 2017"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_total"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/payment_icon"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:text="$100"/>
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColor="#1e88e5"
+       android:id="@+id/tvOrderItems"
+       android:layout_marginTop="5dp"
+       android:textStyle="bold"
+       android:textSize="18sp"
+       android:text="Product 1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:text="Deliver to:"
+            android:layout_marginRight="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvDeliveryAddress"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Des Plaines, IL 60016"/>
+    </LinearLayout>
+</LinearLayout>
+

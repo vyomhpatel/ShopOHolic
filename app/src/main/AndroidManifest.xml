@@ -25,7 +25,18 @@
             android:name=".Home"
             android:screenOrientation="portrait" />
         <activity android:name=".MyAccount" />
-
+        <service
+            android:name=".utility.ShopOholicFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".utility.ShopOholicMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="1e4658eecc577f82a7f52a2449b0bde52613600d" />
