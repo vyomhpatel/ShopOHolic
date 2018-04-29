@@ -47,15 +47,14 @@ bug reports after user installs the app.
 
 
 ## Libraries
-* [Volley](compile 'com.android.volley:volley:1.1.0') - Network Calls
-* [Braintree](implementation 'com.braintreepayments.api:braintree:2.+') - Payment Gateway Testing
-             (implementation 'com.braintreepayments.api:drop-in:3.+')
-* [Picasso](api 'com.squareup.picasso:picasso:2.5.0') - Image Loading from URL
-* [Lottie](api 'com.airbnb.android:lottie:2.5.1') - Custom Animation
-* [Eventbus](api 'org.greenrobot:eventbus:3.0.0') - Data passing between activities and Fragments
-* [Awesome Validations](api 'com.basgeekball:awesome-validation:1.3') - Validation Error styling
-* [Firebase](api 'com.google.firebase:firebase-messaging:15.0.0') - Cloud Messaging
-* [Crashlytics]( api('com.crashlytics.sdk.android:crashlytics:2.9.1@aar')) - App Crashes reporting
+* [Volley](https://developer.android.com/training/volley/) - Network Calls
+* [Braintree](https://www.braintreepayments.com/) - Payment Gateway Testing
+* [Picasso](http://square.github.io/picasso/) - Image Loading from URL
+* [Lottie](https://www.lottiefiles.com) - Custom Animation
+* [Eventbus](http://greenrobot.org/eventbus/) - Data passing between activities and Fragments
+* [Awesome Validations](https://github.com/thyrlian/AwesomeValidation) - Validation Error styling
+* [Firebase](https://firebase.google.com) - Cloud Messaging
+* [Crashlytics](http://try.crashlytics.com) - App Crashes reporting
 
 
 ## Authors
