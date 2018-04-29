@@ -60,5 +60,5 @@ bug reports after user installs the app.
 
 ## Authors
 
-* **VYOM PATEL** - *Initial work* - [Vyom Patel](https://github.com/vyomhpatel)
+* **VYOM PATEL** - [Vyom Patel](https://github.com/vyomhpatel)
 
